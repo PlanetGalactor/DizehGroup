@@ -247,15 +247,15 @@ section {
   transition: var(--transition-smooth);
   border-bottom: 1px solid rgba(255, 255, 255, 0);
   background: transparent;
-  padding: 2rem 0; /* Generous spacing from the top */
+  padding: 2.75rem 0; /* Expanded transparent padding */
 }
 
 .main-header.scrolled {
-  background: rgba(11, 10, 8, 0.92);
+  background: rgba(11, 10, 8, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(203, 162, 90, 0.06);
-  padding: 0.85rem 0; /* Compact spacing when scrolled */
+  border-bottom: 1px solid rgba(203, 162, 90, 0.08);
+  padding: 1.35rem 0; /* Expanded scrolled padding */
 }
 
 .header-container {
@@ -283,7 +283,7 @@ section {
 }
 
 .header-logo {
-  height: 48px;
+  height: 38px; /* Slightly smaller logo height to allow breathing room */
   width: auto;
   transition: var(--transition-smooth);
 }
@@ -698,7 +698,28 @@ section {
    ========================================== */
 .about-section {
   background: var(--color-bg);
-  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(203, 162, 90, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/projects/Gleaming Heavenly White in Ajax/dizeh-ajax-gleaming-white-03.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.04;
+  filter: grayscale(100%) contrast(120%);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-section > * {
+  position: relative;
+  z-index: 2;
 }
 
 .about-grid {
@@ -775,6 +796,27 @@ section {
    ========================================== */
 .services-section {
   background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.services-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/projects/A Sense of Earthiness in Mississsauga/dizeh-mississauga-earthiness-05.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.035;
+  filter: grayscale(100%) contrast(110%);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.services-section > * {
+  position: relative;
+  z-index: 2;
 }
 
 .section-header {
@@ -800,12 +842,29 @@ section {
   transition: var(--transition-smooth);
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-gold), var(--color-gold-light));
+  transition: width 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .service-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(212, 174, 112, 0.3);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(203, 162, 90, 0.45);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(203, 162, 90, 0.05);
+}
+
+.service-card:hover::after {
+  width: 100%;
 }
 
 .service-icon-wrapper {
@@ -815,7 +874,7 @@ section {
 .service-number {
   font-family: var(--font-serif);
   font-size: 2.5rem;
-  color: rgba(212, 174, 112, 0.2);
+  color: rgba(203, 162, 90, 0.2);
   line-height: 1;
   transition: var(--transition-smooth);
 }
@@ -825,12 +884,18 @@ section {
 }
 
 .service-card h3 {
-  font-size: 1.65rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
 .service-card p {
   font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }
@@ -945,9 +1010,9 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(14, 14, 15, 0.95) 0%, rgba(14, 14, 15, 0.1) 80%);
+  background: linear-gradient(to top, rgba(11, 10, 8, 0.95) 0%, rgba(11, 10, 8, 0.4) 50%, transparent 100%);
   opacity: 0;
-  transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), backdrop-filter 0.5s cubic-bezier(0.25, 1, 0.5, 1);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -956,10 +1021,12 @@ section {
 
 .gallery-item:hover .gallery-item-overlay {
   opacity: 1;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 .gallery-item:hover .gallery-item-img {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 .gallery-project-category {
@@ -969,10 +1036,12 @@ section {
   color: var(--color-gold);
   margin-bottom: 0.25rem;
 }
-
 .gallery-project-title {
-  font-size: 1.45rem;
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   color: var(--color-text-primary);
 }
 
@@ -981,6 +1050,27 @@ section {
    ========================================== */
 .service-area-section {
   background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-area-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/projects/Woodbridge Property Wrapped in Delight/dizeh-woodbridge-delight-01.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.03;
+  filter: grayscale(100%);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.service-area-section > * {
+  position: relative;
+  z-index: 2;
 }
 
 .service-area-grid {
@@ -1184,9 +1274,11 @@ section {
 
 /* Form Styling */
 .contact-form-container {
-  background: var(--color-card-bg);
+  background: linear-gradient(135deg, rgba(20, 19, 17, 0.7) 0%, rgba(26, 25, 23, 0.95) 100%);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border: 1px solid var(--color-card-border);
-  padding: 3rem;
+  padding: 3.5rem;
 }
 
 @media (max-width: 576px) {
@@ -1226,14 +1318,14 @@ section {
 .form-group input,
 .form-group select,
 .form-group textarea {
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid var(--color-card-border);
-  padding: 0.95rem 1.25rem;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(203, 162, 90, 0.15);
+  padding: 1.1rem 1.25rem;
   color: var(--color-text-primary);
   font-family: var(--font-sans);
   font-size: 0.95rem;
   border-radius: 0;
-  transition: var(--transition-fast);
+  transition: var(--transition-smooth);
 }
 
 .form-group input:focus,
@@ -1241,11 +1333,12 @@ section {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--color-gold);
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 15px rgba(203, 162, 90, 0.08);
 }
 
 .form-group select option {
-  background: var(--color-card-bg);
+  background: #141311;
   color: var(--color-text-primary);
 }
 
@@ -1506,4 +1599,29 @@ section {
 .services-grid .service-card:nth-child(1) { transition-delay: 0.1s; }
 .services-grid .service-card:nth-child(2) { transition-delay: 0.2s; }
 .services-grid .service-card:nth-child(3) { transition-delay: 0.3s; }
+
+/* Mobile Touch Accommodations for Luxury UI */
+@media (max-width: 991px) {
+  /* Permanent subtle elevation & visible text overlays for mobile */
+  .service-card {
+    border-color: rgba(203, 162, 90, 0.25) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+    transform: translateY(-2px) !important;
+  }
+  
+  .service-card::after {
+    width: 100% !important;
+  }
+
+  .gallery-item-overlay {
+    opacity: 0.95 !important;
+    background: linear-gradient(to top, rgba(11, 10, 8, 0.92) 0%, rgba(11, 10, 8, 0.35) 60%, transparent 100%) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  
+  .gallery-item-img {
+    transform: scale(1.02) !important;
+  }
+}
 

@@ -346,7 +346,7 @@ function initScrollAnimations() {
 
   // Targets to animate
   const targets = document.querySelectorAll(
-    '.about-text-container, .about-philosophy-container, .service-card, .gta-map-card, .contact-info-container, .contact-form-container'
+    '.section-header, .about-grid, .services-grid, .service-area-text, .gta-map-card, .contact-grid'
   );
 
   targets.forEach(target => {
