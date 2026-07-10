@@ -63,7 +63,7 @@ body {
 /* Typography Custom Rules */
 h1, h2, h3, h4 {
   font-family: var(--font-serif);
-  font-weight: 300;
+  font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--color-text-primary);
@@ -428,7 +428,7 @@ section {
 
 .hero-headline {
   font-size: clamp(1.8rem, 4.5vw, 3.8rem);
-  font-weight: 300;
+  font-weight: 600;
   line-height: 1.1;
   margin-bottom: var(--space-sm);
   color: var(--color-text-primary);
@@ -781,7 +781,7 @@ section {
 
 .gallery-project-title {
   font-size: 1.45rem;
-  font-weight: 300;
+  font-weight: 600;
   color: var(--color-text-primary);
 }
 
@@ -967,7 +967,7 @@ section {
   font-family: var(--font-serif);
   font-size: 1.8rem;
   color: var(--color-text-primary);
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .contact-link:hover {
