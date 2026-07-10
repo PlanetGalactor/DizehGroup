@@ -718,11 +718,12 @@ section {
 
 .about-blueprint-svg {
   position: absolute;
-  right: 5%;
-  bottom: 5%;
-  width: 320px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 580px;
   height: auto;
-  opacity: 0.12; /* Subtle and elegant backdrop */
+  opacity: 0.16; /* Visible and elegant background watermark */
   pointer-events: none;
   z-index: 1;
 }
@@ -730,10 +731,11 @@ section {
 @media (max-width: 991px) {
   .about-blueprint-svg {
     right: 50%;
-    bottom: 5%;
+    top: auto;
+    bottom: 0;
     transform: translateX(50%);
-    opacity: 0.06;
-    width: 250px;
+    opacity: 0.1;
+    width: 380px;
   }
 }
 
