@@ -9,71 +9,95 @@
   <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
+  <!-- Noise Overlay for Luxurious Texture -->
+  <div class="noise-overlay pointer-events-none"></div>
+
   <!-- Premium Header & Navigation -->
-  <header class="main-header">
+  <header class="main-header" id="mainNav">
     <div class="header-container">
       <a href="#" class="logo-link">
-        <img src="assets/logo/dizeh_logo_combined_transparent.svg" alt="Dizeh Group Logo" class="header-logo">
+        <span class="logo-text">DIZEH<span class="gold-text-logo">&nbsp;GROUP</span></span>
       </a>
       
       <!-- Desktop Navigation -->
       <nav class="desktop-nav">
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#gallery">Portfolio</a></li>
-          <li><a href="#service-area">Coverage</a></li>
-          <li><a href="#contact" class="nav-cta">Inquire</a></li>
+          <li><a href="#gallery" class="nav-link">Portfolio</a></li>
+          <li><a href="#services" class="nav-link">Process</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#contact" class="gold-btn nav-cta"><span>Book a Consultation</span></a></li>
         </ul>
       </nav>
 
-      <!-- Mobile Navigation Trigger -->
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+      <!-- Mobile Navigation Trigger (Hamburger) -->
+      <button class="mobile-nav-toggle" id="menuBtn" aria-label="Toggle navigation">
         <span class="hamburger"></span>
       </button>
     </div>
   </header>
 
   <!-- Mobile Overlay Menu -->
-  <div class="mobile-nav-overlay">
+  <div class="mobile-nav-overlay" id="mobileMenu">
     <nav class="mobile-nav">
       <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
         <li><a href="#gallery">Portfolio</a></li>
-        <li><a href="#service-area">Coverage</a></li>
-        <li><a href="#contact" class="mobile-nav-cta">Inquire</a></li>
+        <li><a href="#services">Process</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="gold-btn mobile-nav-cta"><span>Book a Consultation</span></a></li>
       </ul>
     </nav>
   </div>
 
   <!-- Hero Section (Full-bleed) -->
   <section id="hero" class="hero-section">
-    <div class="hero-background-wrapper">
-      <img src="assets/projects/Gleaming Heavenly White in Ajax/dizeh-ajax-gleaming-white-03.jpg" alt="Luxury Custom Home Interior" class="hero-bg-image">
+    <!-- Background Image Layer with Parallax support -->
+    <div id="bgimg" class="hero-background-wrapper">
+      <img src="assets/projects/Gleaming Heavenly White in Ajax/dizeh-ajax-gleaming-white-03.jpg" alt="Luxury Custom Home, Toronto &amp; GTA" class="hero-bg-image">
       <div class="hero-overlay"></div>
     </div>
     
     <div class="hero-content">
-      <div class="hero-logo-container">
-        <img src="assets/logo/dizeh_gold_wordmark.svg" alt="Dizeh" class="hero-wordmark">
-        <p class="hero-tagline">Design | Build | Renovation</p>
+      <div class="hero-intro-wrapper fade-up delay-1">
+        <span class="h-line gold-line"></span>
+        <span class="hero-intro-text">
+          Custom Homes &amp; Fine Renovations — Toronto &amp; the GTA
+        </span>
       </div>
-      <h1 class="hero-headline">GTA's Premier Luxury Custom Home Builder</h1>
-      <p class="hero-subheadline">Crafting bespoke architectural masterpieces with timeless design and uncompromising quality.</p>
-      <a href="#gallery" class="hero-scroll-btn">
-        <span class="scroll-arrow"></span>
-        <span class="scroll-text">Explore Portfolio</span>
-      </a>
+      
+      <h1 class="hero-headline font-serif-luxe fade-up delay-2">
+        Building the GTA’s<br>most <span class="gold-text italic">refined</span> homes.
+      </h1>
+      
+      <p class="hero-subheadline fade-up delay-3">
+        Dizeh Group designs and builds bespoke residences and considered renovations for discerning homeowners across Toronto — where architectural integrity meets uncompromising craft.
+      </p>
+      
+      <div class="hero-ctas fade-up delay-4">
+        <a href="#contact" class="gold-btn hero-cta-btn">
+          <span>Book a Consultation</span>
+        </a>
+        <a href="#gallery" class="hero-portfolio-link group">
+          View Our Portfolio
+          <span class="arrow-icon">&rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll Cue -->
+    <div class="hero-scroll-cue fade-up delay-5">
+      <span class="scroll-cue-text">Scroll</span>
+      <span class="scroll-cue-bar">
+        <span class="scroll-cue-dot scroll-dot"></span>
+      </span>
     </div>
   </section>
 

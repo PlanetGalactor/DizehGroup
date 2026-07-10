@@ -18,27 +18,41 @@ function initNavigation() {
   const mobileToggle = document.querySelector('.mobile-nav-toggle');
   const mobileOverlay = document.querySelector('.mobile-nav-overlay');
   const mobileLinks = document.querySelectorAll('.mobile-nav a');
+  const bgImg = document.getElementById('bgimg');
 
-  // Change header styling on scroll
+  // Change header styling on scroll & apply parallax shift
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+    const y = window.scrollY;
+    
+    // Header scroll background styling
+    if (y > 40) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
+    }
+
+    // Parallax zoom effect for hero background
+    if (bgImg) {
+      const shift = Math.min(y * 0.12, 60);
+      bgImg.style.transform = `translateY(${shift}px) scale(1.05)`;
     }
   });
 
   // Mobile menu toggle
   if (mobileToggle && mobileOverlay) {
+    let menuOpen = false;
+    
     mobileToggle.addEventListener('click', () => {
-      mobileToggle.classList.toggle('open');
-      mobileOverlay.classList.toggle('open');
-      document.body.classList.toggle('no-scroll');
+      menuOpen = !menuOpen;
+      mobileToggle.classList.toggle('open', menuOpen);
+      mobileOverlay.classList.toggle('open', menuOpen);
+      document.body.classList.toggle('no-scroll', menuOpen);
     });
 
     // Close mobile menu on link click
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
+        menuOpen = false;
         mobileToggle.classList.remove('open');
         mobileOverlay.classList.remove('open');
         document.body.classList.remove('no-scroll');
