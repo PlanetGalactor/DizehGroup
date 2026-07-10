@@ -247,21 +247,21 @@ section {
   transition: var(--transition-smooth);
   border-bottom: 1px solid rgba(255, 255, 255, 0);
   background: transparent;
+  padding: 2rem 0; /* Generous spacing from the top */
 }
 
 .main-header.scrolled {
-  background: rgba(14, 14, 15, 0.85);
+  background: rgba(11, 10, 8, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-  padding: var(--space-xs) 0;
+  border-bottom: 1px solid rgba(203, 162, 90, 0.06);
+  padding: 0.85rem 0; /* Compact spacing when scrolled */
 }
 
 .header-container {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -435,7 +435,7 @@ section {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(14, 14, 15, 0.98);
+  background: rgba(11, 10, 8, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 1050;
@@ -774,7 +774,7 @@ section {
    SERVICES SECTION
    ========================================== */
 .services-section {
-  background: #09090A;
+  background: var(--color-bg);
 }
 
 .section-header {
@@ -980,7 +980,7 @@ section {
    SERVICE AREA SECTION
    ========================================== */
 .service-area-section {
-  background: #09090A;
+  background: var(--color-bg);
 }
 
 .service-area-grid {
@@ -1040,7 +1040,7 @@ section {
   width: 100%;
   max-width: 550px;
   aspect-ratio: 1.33 / 1;
-  background: radial-gradient(circle at center, #1E1E22 0%, #111113 100%);
+  background: radial-gradient(circle at center, #1a1917 0%, #11100e 100%);
   border: 1px solid var(--color-card-border);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
   overflow: hidden;
@@ -1283,7 +1283,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(14, 14, 15, 0.98);
+  background: rgba(11, 10, 8, 0.98);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
   z-index: 2000;
