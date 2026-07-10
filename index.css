@@ -716,6 +716,27 @@ section {
   z-index: 1;
 }
 
+.about-blueprint-svg {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  width: 320px;
+  height: auto;
+  opacity: 0.12; /* Subtle and elegant backdrop */
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 991px) {
+  .about-blueprint-svg {
+    right: 50%;
+    bottom: 5%;
+    transform: translateX(50%);
+    opacity: 0.06;
+    width: 250px;
+  }
+}
+
 .about-section > * {
   position: relative;
   z-index: 2;
@@ -1091,19 +1112,26 @@ section {
 .coverage-list {
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem 2rem;
   margin-top: var(--space-md);
 }
 
+@media (min-width: 768px) {
+  .coverage-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem 3rem;
+  }
+}
+
 .coverage-list li {
-  font-size: 0.95rem;
-  font-weight: 400;
+  font-size: 1.1rem;
+  font-weight: 500;
   color: var(--color-text-primary);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.75rem;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 .area-dot {
@@ -1112,15 +1140,7 @@ section {
   height: 6px;
   background: var(--color-gold);
   border-radius: 50%;
-  margin-top: 0.45rem; /* Perfectly centers with first line of text */
   flex-shrink: 0;
-}
-
-.area-subs {
-  color: var(--color-text-secondary);
-  font-size: 0.85rem;
-  font-style: italic;
-  margin-left: 0.25rem;
 }
 
 /* Visual Map representation styling */
