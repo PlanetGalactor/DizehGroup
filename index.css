@@ -588,8 +588,8 @@ section {
   font-size: clamp(1rem, 2vw, 1.15rem);
   max-width: 600px;
   margin: 0 0 2.75rem;
-  color: rgba(245, 242, 234, 0.95); /* Brighter, high-contrast cream */
-  font-weight: 500; /* Bolder for visibility */
+  color: rgba(245, 242, 234, 0.85); /* Highly legible cream */
+  font-weight: 300; /* Sophisticated thin weight */
   line-height: 1.7;
 }
 
@@ -803,12 +803,12 @@ section {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('assets/projects/A Sense of Earthiness in Mississsauga/dizeh-mississauga-earthiness-05.jpg');
+  background-image: 
+    linear-gradient(to bottom, rgba(11, 10, 8, 0.95) 0%, rgba(11, 10, 8, 0.82) 50%, rgba(11, 10, 8, 0.95) 100%),
+    url('assets/projects/Woodbridge Property Wrapped in Delight/dizeh-woodbridge-delight-01.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.035;
-  filter: grayscale(100%) contrast(110%);
-  mix-blend-mode: overlay;
+  opacity: 0.35; /* Visible build details that do not distract from the text */
   pointer-events: none;
   z-index: 1;
 }
@@ -1218,9 +1218,8 @@ section {
   background-image: url('assets/projects/Fine Living in Etobicoke/dizeh-etobicoke-fine-living-05.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.12; /* Slightly higher opacity for a distinct rich backdrop behind the form */
-  filter: grayscale(100%) contrast(110%);
-  mix-blend-mode: overlay;
+  opacity: 0.22; /* Increased opacity for clear visibility without clashing blend modes */
+  filter: grayscale(100%) contrast(100%);
   pointer-events: none;
   z-index: 1;
 }
