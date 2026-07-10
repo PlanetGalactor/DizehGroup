@@ -1662,35 +1662,15 @@ section {
   z-index: 2;
 }
 
-/* Gold Dot Grid background decoration */
-.instagram-section::before {
-  content: '';
+.instagram-blueprint-svg {
   position: absolute;
-  top: 12%;
-  left: 3%;
-  width: 240px;
-  height: 240px;
-  background-image: radial-gradient(rgba(212, 174, 112, 0.15) 1.5px, transparent 1.5px);
-  background-size: 24px 24px;
-  opacity: 0.65;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Fine Gold Grid lines and coordinates */
-.instagram-section::after {
-  content: '';
-  position: absolute;
-  bottom: 10%;
-  right: 3%;
-  width: 200px;
-  height: 200px;
-  background-image: 
-    linear-gradient(rgba(212, 174, 112, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(212, 174, 112, 0.08) 1px, transparent 1px);
-  background-size: 40px 40px;
-  border: 1px solid rgba(212, 174, 112, 0.12);
-  opacity: 0.65;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1400px;
+  height: auto;
+  opacity: 0.16; /* Clean blueprint background watermark */
   pointer-events: none;
   z-index: 1;
 }
