@@ -413,6 +413,7 @@ section {
 .hamburger::after {
   content: '';
   position: absolute;
+  left: 0; /* Vertically align and stack pseudo-elements symmetrically */
   width: 24px;
   height: 2px;
   background: var(--color-text-primary);
@@ -591,7 +592,7 @@ section {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 8.5vw, 6rem);
   font-weight: 500;
-  line-height: 0.98;
+  line-height: 1.15; /* Increased to prevent ascender/descender overlapping (g and f) */
   letter-spacing: -0.01em;
   margin-bottom: 2rem;
   color: var(--color-text-primary);
@@ -1649,9 +1650,49 @@ section {
    INSTAGRAM SECTION
    ===================================================== */
 .instagram-section {
+  position: relative;
+  overflow: hidden;
   background: var(--color-bg);
   padding: 8rem 0;
   border-top: 1px solid rgba(212, 174, 112, 0.1);
+}
+
+.instagram-section .section-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Gold Dot Grid background decoration */
+.instagram-section::before {
+  content: '';
+  position: absolute;
+  top: 12%;
+  left: 3%;
+  width: 240px;
+  height: 240px;
+  background-image: radial-gradient(rgba(212, 174, 112, 0.15) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  opacity: 0.65;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Fine Gold Grid lines and coordinates */
+.instagram-section::after {
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  right: 3%;
+  width: 200px;
+  height: 200px;
+  background-image: 
+    linear-gradient(rgba(212, 174, 112, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 174, 112, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  border: 1px solid rgba(212, 174, 112, 0.12);
+  opacity: 0.65;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .instagram-header {
