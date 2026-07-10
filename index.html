@@ -226,34 +226,64 @@
 
   <div class="section-divider gold-line"></div>
 
-  <!-- Service Area Section -->
+  <!-- Areas We Serve Section -->
   <section id="service-area" class="service-area-section">
     <div class="section-container">
       <div class="service-area-grid">
         <div class="service-area-text">
-          <span class="section-label">Coverage</span>
+          <span class="section-label">Areas We Serve</span>
           <h2 class="section-title">Serving Toronto &amp; the Greater Toronto Area</h2>
           <p>
             Dizeh Group delivers custom luxury home building, architectural design, and estate renovations to the most prestigious neighborhoods across the GTA. We coordinate projects directly in:
           </p>
           <ul class="coverage-list">
-            <li><span class="area-dot"></span> Toronto (Forest Hill, Rosedale, Bridle Path)</li>
-            <li><span class="area-dot"></span> Mississauga (Mineola, Lorne Park)</li>
-            <li><span class="area-dot"></span> Oakville</li>
-            <li><span class="area-dot"></span> Vaughan (Woodbridge, Kleinburg)</li>
-            <li><span class="area-dot"></span> Markham</li>
-            <li><span class="area-dot"></span> Richmond Hill</li>
-            <li><span class="area-dot"></span> North York</li>
+            <li><span class="area-dot"></span> <div><strong>Toronto</strong><span class="area-subs"> / Forest Hill, Rosedale, Bridle Path, Lawrence Park</span></div></li>
+            <li><span class="area-dot"></span> <div><strong>Mississauga</strong><span class="area-subs"> / Mineola, Lorne Park</span></div></li>
+            <li><span class="area-dot"></span> <div><strong>Vaughan</strong><span class="area-subs"> / Woodbridge, Kleinburg</span></div></li>
+            <li><span class="area-dot"></span> <div><strong>Oakville</strong><span class="area-subs"> / Eastlake, Bronte</span></div></li>
+            <li><span class="area-dot"></span> <div><strong>Richmond Hill</strong><span class="area-subs"> / Bayview Hill</span></div></li>
+            <li><span class="area-dot"></span> <div><strong>Markham</strong><span class="area-subs"> / Unionville</span></div></li>
+            <li><span class="area-dot"></span> <div><strong>North York</strong><span class="area-subs"> / York Mills, Hoggs Hollow</span></div></li>
           </ul>
         </div>
+        
         <div class="service-area-visual">
           <div class="gta-map-card">
+            <!-- Architectural SVG Blueprint Map Layer -->
+            <svg class="map-blueprint-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 375" fill="none">
+              <!-- Blueprint Grid Lines -->
+              <defs>
+                <pattern id="map-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(203, 162, 90, 0.05)" stroke-width="0.75" />
+                  <path d="M 10 0 L 10 10 M 0 10 L 10 10" fill="none" stroke="rgba(203, 162, 90, 0.02)" stroke-width="0.5" />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#map-grid)" />
+              
+              <!-- Coordinate Crosshairs & Compass -->
+              <circle cx="250" cy="187" r="120" stroke="rgba(203, 162, 90, 0.04)" stroke-width="1" stroke-dasharray="4 8" />
+              <circle cx="250" cy="187" r="60" stroke="rgba(203, 162, 90, 0.06)" stroke-width="0.75" />
+              <path d="M 250 20 L 250 355 M 20 187 L 480 187" stroke="rgba(203, 162, 90, 0.04)" stroke-width="0.75" stroke-dasharray="2 4" />
+              
+              <!-- Lake Ontario Vector Outline -->
+              <path d="M 50,330 C 120,330 180,310 240,320 C 300,330 380,350 450,335 L 450,375 L 50,375 Z" fill="rgba(20, 19, 17, 0.8)" stroke="rgba(203, 162, 90, 0.15)" stroke-width="1.5" />
+              <text x="250" y="355" fill="rgba(203, 162, 90, 0.25)" font-family="var(--font-sans)" font-size="10" letter-spacing="0.2em" text-anchor="middle">LAKE ONTARIO</text>
+              
+              <!-- Faint Regional Boundaries / Connector Dotted Lines -->
+              <path d="M 120,240 L 220,180 L 320,180 L 390,200" stroke="rgba(203, 162, 90, 0.1)" stroke-width="1" stroke-dasharray="3 3" />
+              <path d="M 220,180 L 250,110 L 320,180" stroke="rgba(203, 162, 90, 0.1)" stroke-width="1" stroke-dasharray="3 3" />
+              
+              <!-- Latitude/Longitude Specs -->
+              <text x="25" y="35" fill="rgba(255, 255, 255, 0.25)" font-family="monospace" font-size="8">43.6532° N / 79.3832° W</text>
+              <text x="400" y="35" fill="rgba(255, 255, 255, 0.25)" font-family="monospace" font-size="8">GRID: GTA_METRO</text>
+            </svg>
+            
             <div class="map-overlay">
-              <span class="pulse-point point-toronto" data-label="Toronto"></span>
-              <span class="pulse-point point-mississauga" data-label="Mississauga"></span>
-              <span class="pulse-point point-oakville" data-label="Oakville"></span>
-              <span class="pulse-point point-vaughan" data-label="Vaughan"></span>
-              <span class="pulse-point point-markham" data-label="Markham"></span>
+              <span class="pulse-point point-toronto" style="top: 62%; left: 55%;" data-label="Toronto"></span>
+              <span class="pulse-point point-mississauga" style="top: 68%; left: 34%;" data-label="Mississauga"></span>
+              <span class="pulse-point point-oakville" style="top: 76%; left: 16%;" data-label="Oakville"></span>
+              <span class="pulse-point point-vaughan" style="top: 42%; left: 38%;" data-label="Vaughan"></span>
+              <span class="pulse-point point-markham" style="top: 40%; left: 74%;" data-label="Markham"></span>
             </div>
             <div class="map-tag">GTA Region Coverage</div>
           </div>
@@ -267,13 +297,16 @@
   <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <div class="section-container">
-      <div class="contact-grid">
-        <div class="contact-info-container">
-          <span class="section-label">Connect</span>
-          <h2 class="section-title">Begin Your Custom Build Journey</h2>
-          <p class="contact-intro">
-            We invite you to schedule a private consultation at our office or directly on your property. Let's discuss your architectural vision and outline how Dizeh Group can bring it to life.
-          </p>
+      <div class="contact-card">
+        <!-- Left Column: Info Box inside Card -->
+        <div class="contact-info-column">
+          <div>
+            <span class="section-label">Connect</span>
+            <h2 class="section-title">Begin Your Custom Build Journey</h2>
+            <p class="contact-intro">
+              We invite you to schedule a private consultation at our office or directly on your property. Let's discuss your architectural vision and outline how Dizeh Group can bring it to life.
+            </p>
+          </div>
           
           <div class="contact-methods">
             <div class="contact-method">
@@ -286,15 +319,32 @@
             </div>
             <div class="contact-method">
               <h4>Follow Us</h4>
-              <div class="social-links">
-                <a href="https://instagram.com/dizehgroup" target="_blank" rel="noopener noreferrer">Instagram (@dizehgroup)</a>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <div class="social-icons-row">
+                <a href="https://instagram.com/dizehgroup" class="social-icon-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </a>
+                <a href="https://facebook.com" class="social-icon-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                  </svg>
+                </a>
+                <a href="https://youtube.com" class="social-icon-link" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+                  <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2C5.12 19.54 12 19.54 12 19.54s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path>
+                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
         </div>
         
-        <div class="contact-form-container">
+        <!-- Right Column: Form Box inside Card -->
+        <div class="contact-form-column">
           <!-- Web3Forms Backend Integrator -->
           <form action="https://api.web3forms.com/submit" method="POST" id="inquiry-form">
             <!-- Web3Forms Access Key (Placeholder / Configurable) -->
@@ -361,11 +411,35 @@
   <!-- Footer -->
   <footer class="main-footer">
     <div class="footer-container">
+      <!-- Column 1: Brand & Socials -->
       <div class="footer-brand">
         <img src="assets/logo/dizeh_logo_combined_transparent.svg" alt="Dizeh Group" class="footer-logo">
-        <p class="footer-philosophy">A boutique architecture, custom home building, and luxury estate renovation firm in Toronto.</p>
+        <p class="footer-philosophy">
+          A boutique architecture, custom home building, and luxury estate renovation firm in Toronto.
+        </p>
+        <div class="social-icons-row" style="margin-top: 1.5rem;">
+          <a href="https://instagram.com/dizehgroup" class="social-icon-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://facebook.com" class="social-icon-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="https://youtube.com" class="social-icon-link" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2C5.12 19.54 12 19.54 12 19.54s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+            </svg>
+          </a>
+        </div>
       </div>
       
+      <!-- Column 2: Navigation -->
       <div class="footer-nav">
         <h4>Navigation</h4>
         <ul>
@@ -377,10 +451,22 @@
         </ul>
       </div>
       
+      <!-- Column 3: Contact Inquiries -->
       <div class="footer-contact">
         <h4>Inquiries</h4>
         <p><a href="tel:+16475002429" class="footer-link">+1 (647) 500-2429</a></p>
-        <p>Toronto, Ontario, Canada</p>
+        <p class="footer-address">Toronto, Ontario, Canada</p>
+        <p class="footer-cta-text" style="font-size: 0.85rem; color: var(--color-text-secondary); margin-top: 1rem; line-height: 1.5;">
+          Available for consultations across Toronto and the Greater Toronto Area.
+        </p>
+      </div>
+      
+      <!-- Column 4: Brand Standards -->
+      <div class="footer-standards">
+        <h4>Dizeh Standards</h4>
+        <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.6; margin: 0;">
+          Dedicated to structural supremacy and design integrity. Shaping the skyline of Toronto's elite neighborhoods with bespoke home building, architectural precision, and luxury estate renovations.
+        </p>
       </div>
     </div>
     
