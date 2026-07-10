@@ -127,7 +127,7 @@ const PORTFOLIO_DATA = [
     src: "assets/projects/Fine Living in Etobicoke/dizeh-etobicoke-fine-living-01.jpg"
   },
   {
-    title: "Bespoke Wine Cellar & Bar",
+    title: "Bespoke Living Area",
     category: "etobicoke",
     categoryLabel: "Fine Living in Etobicoke",
     src: "assets/projects/Fine Living in Etobicoke/dizeh-etobicoke-fine-living-05.jpg"
@@ -139,7 +139,7 @@ const PORTFOLIO_DATA = [
     src: "assets/projects/Fine Living in Etobicoke/dizeh-etobicoke-fine-living-10.jpg"
   },
   {
-    title: "Polished Limestone En Suite",
+    title: "Polished Walk-In Closet",
     category: "etobicoke",
     categoryLabel: "Fine Living in Etobicoke",
     src: "assets/projects/Fine Living in Etobicoke/dizeh-etobicoke-fine-living-15.jpg"

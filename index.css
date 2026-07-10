@@ -444,7 +444,7 @@ section {
     display: flex;
   }
   .main-header {
-    padding: 1.5rem 0; /* Balanced, even top/bottom padding on mobile */
+    padding: 2.2rem 0 1.5rem; /* Additional spacing above the logo on mobile screens */
   }
   .main-header.scrolled {
     padding: 1rem 0;
