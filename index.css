@@ -310,7 +310,7 @@ section {
 }
 
 .header-logo {
-  height: 38px; /* Slightly smaller logo height to allow breathing room */
+  height: 52px; /* Increased height for better visibility */
   width: auto;
   transition: var(--transition-smooth);
 }
@@ -349,18 +349,19 @@ section {
 }
 
 .desktop-nav a {
-  font-size: 0.9rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-text-secondary);
+  color: rgba(245, 242, 234, 0.85); /* Brighter contrast on dark background */
   position: relative;
   padding: 0.5rem 0;
+  transition: color 0.3s ease;
 }
 
 .desktop-nav a:hover,
 .desktop-nav a.active {
-  color: var(--color-text-primary);
+  color: var(--color-white);
 }
 
 .desktop-nav a::after {
@@ -587,8 +588,8 @@ section {
   font-size: clamp(1rem, 2vw, 1.15rem);
   max-width: 600px;
   margin: 0 0 2.75rem;
-  color: rgba(237, 234, 227, 0.85);
-  font-weight: 300;
+  color: rgba(245, 242, 234, 0.95); /* Brighter, high-contrast cream */
+  font-weight: 500; /* Bolder for visibility */
   line-height: 1.7;
 }
 
