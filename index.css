@@ -79,7 +79,19 @@
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(203, 162, 90, 0.6);
-  transition: color 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  background: transparent;
+  color: var(--color-text-primary) !important;
+  font-family: var(--font-sans) !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  padding: 1.1rem 2.2rem;
+  cursor: pointer;
+  transition: color 0.5s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  text-decoration: none;
+  line-height: 1;
+  border-radius: 0;
 }
 
 .gold-btn::before {
@@ -98,6 +110,7 @@
 
 .gold-btn:hover {
   color: var(--color-black) !important;
+  border-color: var(--color-gold-light);
 }
 
 .gold-btn span {
@@ -369,26 +382,7 @@ section {
 }
 
 .nav-cta {
-  border: 1px solid var(--color-gold);
-  padding: 0.75rem 1.75rem !important;
-  border-radius: 0;
-  font-family: var(--font-serif);
-  font-size: 1.05rem !important;
-  text-transform: none !important;
-  letter-spacing: 0.02em !important;
-  color: var(--color-gold) !important;
-  background: transparent;
-  transition: var(--transition-smooth) !important;
-}
-
-.nav-cta::after {
-  display: none !important;
-}
-
-.nav-cta:hover {
-  background: var(--color-gold);
-  color: var(--color-black) !important;
-  box-shadow: 0 4px 20px rgba(212, 174, 112, 0.25);
+  padding: 0.75rem 1.5rem !important;
 }
 
 /* Mobile Nav Toggle */
@@ -491,16 +485,7 @@ section {
 }
 
 .mobile-nav-cta {
-  border: 1px solid var(--color-gold);
-  color: var(--color-gold) !important;
-  padding: 0.75rem 2.5rem;
-  display: inline-block;
   margin-top: 1rem;
-}
-
-.mobile-nav-cta:hover {
-  background: var(--color-gold);
-  color: var(--color-black) !important;
 }
 
 /* ==========================================
@@ -615,10 +600,7 @@ section {
 }
 
 .hero-cta-btn {
-  padding: 1.1rem 2.2rem;
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  /* Inherits standard gold-btn dimensions */
 }
 
 .hero-portfolio-link {
@@ -963,12 +945,14 @@ section {
 
 .filter-btn {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(203, 162, 90, 0.25);
   color: var(--color-text-secondary);
-  padding: 0.65rem 1.5rem;
-  font-size: 0.85rem;
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.15em;
   cursor: pointer;
   transition: var(--transition-fast);
 }
@@ -976,8 +960,8 @@ section {
 .filter-btn:hover,
 .filter-btn.active {
   border-color: var(--color-gold);
-  color: var(--color-gold);
-  background: rgba(212, 174, 112, 0.03);
+  color: var(--color-gold-light);
+  background: rgba(203, 162, 90, 0.06);
 }
 
 /* Masonry / Grid */
