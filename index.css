@@ -256,7 +256,7 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1100; /* Set above mobile overlay (1050) to keep toggle/logo visible and interactive */
   transition: var(--transition-smooth);
   border-bottom: 1px solid rgba(255, 255, 255, 0);
   background: transparent;
@@ -392,7 +392,12 @@ section {
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1100;
+  z-index: 1200;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .hamburger {
@@ -435,7 +440,16 @@ section {
     display: none;
   }
   .mobile-nav-toggle {
-    display: block;
+    display: flex;
+  }
+  .main-header {
+    padding: 1.5rem 0; /* Balanced, even top/bottom padding on mobile */
+  }
+  .main-header.scrolled {
+    padding: 1rem 0;
+  }
+  .header-logo {
+    height: 42px; /* Scale logo down slightly for mobile alignment */
   }
 }
 
@@ -1526,10 +1540,15 @@ section {
 .lightbox-prev,
 .lightbox-next {
   position: absolute;
-  background: none;
-  border: none;
+  background: rgba(11, 10, 8, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 174, 112, 0.25);
+  border-radius: 50%;
   color: var(--color-text-secondary);
-  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: var(--transition-fast);
   z-index: 2100;
@@ -1539,41 +1558,55 @@ section {
 .lightbox-prev:hover,
 .lightbox-next:hover {
   color: var(--color-gold);
+  border-color: var(--color-gold);
 }
 
 .lightbox-close {
   top: 2rem;
   right: 2rem;
-  font-size: 3.5rem;
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
 }
 
 .lightbox-prev {
   left: 2rem;
   top: 50%;
   transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
 }
 
 .lightbox-next {
   right: 2rem;
   top: 50%;
   transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 768px) {
-  .lightbox-prev, .lightbox-next {
-    position: relative;
-    left: auto;
-    right: auto;
-    transform: none;
-    font-size: 2rem;
+  .lightbox-prev {
+    left: 1rem;
+    width: 44px;
+    height: 44px;
+  }
+  .lightbox-next {
+    right: 1rem;
+    width: 44px;
+    height: 44px;
+  }
+  .lightbox-close {
+    top: 1rem;
+    right: 1rem;
+    width: 44px;
+    height: 44px;
   }
   .lightbox-content {
     gap: 1rem;
-  }
-  .lightbox-controls-mobile {
-    display: flex;
-    gap: 3rem;
-    margin-top: 1rem;
+    width: 95%;
   }
 }
 /* ==========================================
