@@ -737,7 +737,7 @@ section {
   }
 }
 
-.about-section > * {
+.about-section > *:not(.about-blueprint-svg) {
   position: relative;
   z-index: 2;
 }
