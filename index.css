@@ -1222,6 +1222,27 @@ section {
    ========================================== */
 .contact-section {
   background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/projects/Fine Living in Etobicoke/dizeh-etobicoke-fine-living-05.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12; /* Slightly higher opacity for a distinct rich backdrop behind the form */
+  filter: grayscale(100%) contrast(110%);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.contact-section > * {
+  position: relative;
+  z-index: 2;
 }
 
 .contact-grid {
