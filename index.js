@@ -79,7 +79,7 @@ const PORTFOLIO_DATA = [
     src: "assets/projects/A Sense of Earthiness in Mississsauga/dizeh-mississauga-earthiness-03.jpg"
   },
   {
-    title: "Bespoke Millwork & Dining",
+    title: "Bespoke Millwork & Vanity",
     category: "mississauga",
     categoryLabel: "A Sense of Earthiness in Mississauga",
     src: "assets/projects/A Sense of Earthiness in Mississsauga/dizeh-mississauga-earthiness-05.jpg"
@@ -93,7 +93,7 @@ const PORTFOLIO_DATA = [
     src: "assets/projects/Woodbridge Property Wrapped in Delight/dizeh-woodbridge-delight-01.jpg"
   },
   {
-    title: "Light-Filled Living Hall",
+    title: "Gold-accented Kitchen",
     category: "woodbridge",
     categoryLabel: "Woodbridge Property Wrapped in Delight",
     src: "assets/projects/Woodbridge Property Wrapped in Delight/dizeh-woodbridge-delight-03.jpg"
@@ -101,7 +101,7 @@ const PORTFOLIO_DATA = [
 
   // Ajax
   {
-    title: "Architectural Spiral Staircase",
+    title: "Luxurious Grand Kitchen",
     category: "ajax",
     categoryLabel: "Gleaming Heavenly White in Ajax",
     src: "assets/projects/Gleaming Heavenly White in Ajax/dizeh-ajax-gleaming-white-03.jpg"
@@ -113,7 +113,7 @@ const PORTFOLIO_DATA = [
     src: "assets/projects/Gleaming Heavenly White in Ajax/dizeh-ajax-gleaming-white-01.jpg"
   },
   {
-    title: "Monochrome Gourmet Kitchen",
+    title: "Monochrome white bathroom",
     category: "ajax",
     categoryLabel: "Gleaming Heavenly White in Ajax",
     src: "assets/projects/Gleaming Heavenly White in Ajax/dizeh-ajax-gleaming-white-07.jpg"
@@ -153,7 +153,7 @@ const PORTFOLIO_DATA = [
     src: "assets/projects/Bright and Fun Springtime in Brampton/dizeh-brampton-springtime-01.jpg"
   },
   {
-    title: "Bespoke Fireplace Detail",
+    title: "Custom Grand Bathroom",
     category: "brampton",
     categoryLabel: "Bright and Fun Springtime in Brampton",
     src: "assets/projects/Bright and Fun Springtime in Brampton/dizeh-brampton-springtime-04.jpg"
